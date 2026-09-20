@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+
+<html lang="es">  
+<head>  
+<meta charset="UTF-8">  
+<meta name="viewport" content="width=device-width, initial-scale=1.0">  
+<title>Para Ari 🌻</title>  
+<style>  
+    * { box-sizing: border-box; }  body {  
+    margin: 0;  
+    min-height: 100vh;  
+    overflow: hidden;  
+    font-family: Georgia, "Times New Roman", serif;  
+    background:  
+        radial-gradient(circle at 50% 25%, #24355f 0%, #101a35 38%, #070b18 100%);  
+    color: #fff;  
+    display: flex;  
+    align-items: center;  
+    justify-content: center;  
+}  
+
+.stars {  
+    position: fixed;  
+    inset: 0;  
+    pointer-events: none;  
+}  
+
+.star {  
+    position: absolute;  
+    width: 3px;  
+    height: 3px;  
+    background: white;  
+    border-radius: 50%;  
+    opacity: .7;  
+    animation: twinkle 2.5s infinite ease-in-out;  
+}  
+
+@keyframes twinkle {  
+    0%, 100% { opacity: .25; transform: scale(.8); }  
+    50% { opacity: 1; transform: scale(1.5); }  
+}  
+
+.card {  
+    position: relative;  
+    z-index: 2;  
+    width: min(90%, 520px);  
+    padding: 34px 26px 38px;  
+    text-align: center;  
+    border: 1px solid rgba(255,255,255,.16);  
+    border-radius: 28px;  
+    background: rgba(8, 13, 30, .58);  
+    backdrop-filter: blur(9px);  
+    box-shadow: 0 20px 60px rgba(0,0,0,.4);  
+}  
+
+h1 {  
+    margin: 0 0 8px;  
+    font-size: clamp(2rem, 8vw, 3.3rem);  
+    font-weight: normal;  
+}  
+
+.subtitle {  
+    margin: 0 0 24px;  
+    color: #ffe99a;  
+    font-size: 1.05rem;  
+    letter-spacing: 1px;  
+}  
+
+.garden {  
+    position: relative;  
+    height: 235px;  
+    margin: 0 auto 20px;  
+    overflow: hidden;  
+}  
+
+.ground {  
+    position: absolute;  
+    bottom: 0;  
+    left: 4%;  
+    width: 92%;  
+    height: 28px;  
+    border-radius: 50%;  
+    background: #182a1d;  
+    opacity: .8;  
+}  
+
+.flower {  
+    position: absolute;  
+    bottom: 17px;  
+    width: 70px;  
+    height: 190px;  
+    animation: sway 3.5s ease-in-out infinite;  
+    transform-origin: bottom center;  
+}  
+
+.flower:nth-child(2) { left: 17%; animation-delay: -.8s; }  
+.flower:nth-child(3) { left: 43%; animation-delay: -.2s; transform: scale(1.12); }  
+.flower:nth-child(4) { left: 69%; animation-delay: -1.2s; transform: scale(.9); }  
+
+.stem {  
+    position: absolute;  
+    bottom: 0;  
+    left: 34px;  
+    width: 5px;  
+    height: 125px;  
+    border-radius: 10px;  
+    background: #4e8b55;  
+}  
+
+.leaf {  
+    position: absolute;  
+    width: 32px;  
+    height: 15px;  
+    background: #5c9b5d;  
+    border-radius: 100% 0 100% 0;  
+}  
+
+.leaf.left { left: 7px; bottom: 58px; transform: rotate(-25deg); }  
+.leaf.right { left: 36px; bottom: 82px; transform: rotate(25deg) scaleX(-1); }  
+
+.head {  
+    position: absolute;  
+    left: 10px;  
+    top: 0;  
+    width: 50px;  
+    height: 50px;  
+    border-radius: 50%;  
+    background: #8b5a16;  
+    box-shadow: 0 0 18px rgba(255, 210, 70, .35);  
+}  
+
+.petal {  
+    position: absolute;  
+    left: 12px;  
+    top: 12px;  
+    width: 26px;  
+    height: 26px;  
+    border-radius: 50%;  
+    background: #ffd83d;  
+    transform-origin: 13px 13px;  
+}  
+
+.p1 { transform: rotate(0deg) translateY(-24px); }  
+.p2 { transform: rotate(45deg) translateY(-24px); }  
+.p3 { transform: rotate(90deg) translateY(-24px); }  
+.p4 { transform: rotate(135deg) translateY(-24px); }  
+.p5 { transform: rotate(180deg) translateY(-24px); }  
+.p6 { transform: rotate(225deg) translateY(-24px); }  
+.p7 { transform: rotate(270deg) translateY(-24px); }  
+.p8 { transform: rotate(315deg) translateY(-24px); }  
+
+@keyframes sway {  
+    0%, 100% { transform: rotate(-2deg); }  
+    50% { transform: rotate(2deg); }  
+}  
+
+.message {  
+    min-height: 110px;  
+    display: flex;  
+    flex-direction: column;  
+    justify-content: center;  
+    line-height: 1.65;  
+    font-size: 1.05rem;  
+    color: #f7f4ea;  
+}  
+
+.signature {  
+    margin-top: 17px;  
+    color: #ffe99a;  
+    font-size: 1.15rem;  
+}  
+
+.hint {  
+    margin-top: 22px;  
+    font-family: Arial, sans-serif;  
+    font-size: .72rem;  
+    color: rgba(255,255,255,.42);  
+}
+
+</style>  
+</head>  <body>  
+<div class="stars" id="stars"></div>  <main class="card">  
+    <h1>Para Ari te amo muchísimo 🌻</h1>  
+    <p class="subtitle">21 de septiembre</p>  <section class="garden" aria-label="Flores amarillas">  
+    <div class="ground"></div>  
+
+    <div class="flower">  
+        <div class="stem"></div>  
+        <div class="leaf left"></div>  
+        <div class="leaf right"></div>  
+        <div class="head">  
+            <span class="petal p1"></span><span class="petal p2"></span>  
+            <span class="petal p3"></span><span class="petal p4"></span>  
+            <span class="petal p5"></span><span class="petal p6"></span>  
+            <span class="petal p7"></span><span class="petal p8"></span>  
+        </div>  
+    </div>  
+
+    <div class="flower">  
+        <div class="stem"></div>  
+        <div class="leaf left"></div>  
+        <div class="leaf right"></div>  
+        <div class="head">  
+            <span class="petal p1"></span><span class="petal p2"></span>  
+            <span class="petal p3"></span><span class="petal p4"></span>  
+            <span class="petal p5"></span><span class="petal p6"></span>  
+            <span class="petal p7"></span><span class="petal p8"></span>  
+        </div>  
+    </div>  
+
+    <div class="flower">  
+        <div class="stem"></div>  
+        <div class="leaf left"></div>  
+        <div class="leaf right"></div>  
+        <div class="head">  
+            <span class="petal p1"></span><span class="petal p2"></span>  
+            <span class="petal p3"></span><span class="petal p4"></span>  
+            <span class="petal p5"></span><span class="petal p6"></span>  
+            <span class="petal p7"></span><span class="petal p8"></span>  
+        </div>  
+    </div>  
+</section>  
+
+<div class="message">  
+    <div>  
+        se que aun no es 21 pero queria darte un pequeño y bonito.<br>  
+        pero hay detalles que uno guarda mucho más tiempo.  
+    </div>  
+
+    <div class="signature">  
+        Feliz 21 de septiembre, Ari deseo que pasemos este año juntos y muchos mas, quiero amarte por el resto de mi vida y hacerte la mujer mas feliz posible porque te amo con todo mi corazon no hay dia que deje de pensar en ti. 💛  
+    </div>  
+</div>  
+
+<div class="hint">Hecho con cariño, especialmente para ti.</div>
+
+</main>  <script>  
+    const stars = document.getElementById("stars");  
+  
+    for (let i = 0; i < 75; i++) {  
+        const star = document.createElement("span");  
+        star.className = "star";  
+        star.style.left = Math.random() * 100 + "%";  
+        star.style.top = Math.random() * 100 + "%";  
+        star.style.animationDelay = (Math.random() * 3) + "s";  
+        star.style.animationDuration = (1.8 + Math.random() * 2.5) + "s";  
+        stars.appendChild(star);  
+    }  
+</script>  </body>  
+</html>  
